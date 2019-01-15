@@ -241,7 +241,7 @@ void  * UDInsertSorted(const ud_t deq, const void *const p_data, const size_t da
 
 
 
-/* Function that returns 1 if the value pointed to by p_data was found in the deque or 0 otherwise. */
+/* Function that returns the index of the related element if the value pointed to by p_data was found in the deque or UD_INVALID_IDX otherwise. */
 ud_size_t  UDFind(const ud_t deq, const void *const p_data, ud_cmp_t cmp_callback_func);
 
 
