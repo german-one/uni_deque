@@ -2,11 +2,44 @@
 # uni_deque
 C Deque Library
 
-Implementation of a deque using a doubly-linked list as container.
+A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Aditionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referenzing the Deque.
+Schema:
+![deque](images/deque.png)
 
-Besides of the general functions which can be used for any kind of data, the library contains functions that are already specialized for basic types and string types.
 
-This library also allows you to insert and access values at any position in the list, to enumerate a range of the list, to reverse the list, to sort the list, to insert sorted, to search for values, ...
+The container for the values is a doubly-linked list. Besides of the pointer to the `previous` element and the `next` element it holds a pointer `data` to the actual value. This value can be of any type but should be the same for each element in a Deque because there will be no information about the memory size saved that `data` points to.
+Schema of the linked list:
+![list detail](images/list_detail.png)
 
-The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library.
-The "main.c" file contains two examples of how to use the library. One for int values and one for null-terminated strings.
+
+Even if a Deque performs best only if you access the begin or the end of the list, this library also allows you to insert and access values at any position in the list, to enumerate a range of the list, to reverse the list, to sort the list, to insert sorted, to search for values, ...
+
+In addition th the general functions which can be used for any kind of data, the library contains functions that are already specialized for basic types (characters, integers, floating points) and null-terminated strings (char* and wchar_t*).
+
+Functions for data processing contain key word that explain their purpose:
+- Push
+  - add a new element at the beginning or end of the list
+- Insert
+  - insert a new element at a certain position in the list
+- Pop
+  - delete an element at the beginning or end of the list
+- Erase
+  - delete an element at a certain position in the list
+- Remove
+  - delete an element that contains a certain value
+- Front
+  - access the begin of the list
+- Back
+  - access the end of the list
+- At
+  - access an element at a certain position in the list
+- Sort
+  - sort the list
+- Asc
+  - ascending order
+- Desc
+  - descending order
+- Find
+  - search the index of an element that contains a certain value
+
+The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for int values and one for null-terminated strings.
