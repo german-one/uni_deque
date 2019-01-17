@@ -34,7 +34,7 @@ Function names for data processing consist of key words that explain their purpo
 - Find
   - search the index of an element that contains a certain value
 
-The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for int values and one for null-terminated strings.
+The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for long int values and one for null-terminated strings.
 
 
 ## A little background information about the implementation
