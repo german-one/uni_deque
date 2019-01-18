@@ -34,6 +34,31 @@ Function names for data processing consist of key words that explain their purpo
 - Find
   - search the index of an element that contains a certain value
 
+Specialized functions have an appendix that indicates the type that the function was made for:
+- C    (for char)
+- SC   (for signed char)
+- UC   (for unsigned char)
+- S    (for short)
+- US   (for unsigned short)
+- I    (for int)
+- UI   (for unsigned int)
+- L    (for long)
+- UL   (for unsigned long)
+- LL   (for long long)
+- ULL  (for unsigned long long)
+- F    (for float)
+- D    (for double)
+- LD   (for long double)
+- Str  (for null-terminated string of char)
+- WStr (for null-terminated string of wchar_t)
+
+Examples:
+The name of the function to add an int at the beginning of a Deque of int is
+`PushFrontI`
+The name of the function to insert a double into an ascending-sorted Deque of double is
+`InsertAscD`
+
+
 The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for long int values and one for null-terminated strings.
 
 
