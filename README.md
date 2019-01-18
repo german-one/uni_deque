@@ -53,9 +53,13 @@ Specialized functions have an appendix that indicates the type that the function
 - WStr (for null-terminated string of wchar_t)
 
 Examples:
+
 The name of the function to add an int at the beginning of a Deque of int is
+
 `PushFrontI`
+
 The name of the function to insert a double into an ascending-sorted Deque of double is
+
 `InsertAscD`
 
 
