@@ -10,6 +10,7 @@ Even if a Deque performs best only if you access the begin or the end of the lis
 In addition to the general functions which can be used for any kind of data, the library contains functions that are already specialized for basic types (characters, integers, floating points) and null-terminated strings (char* and wchar_t*).
 
 Function names for data processing consist of key words that explain their purpose:
+
 | Key Word | Meaning
 | -------- | ---
 | Push     | add a new element at the beginning or end of the list
