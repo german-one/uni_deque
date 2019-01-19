@@ -146,6 +146,7 @@ Return a value greater than zero if the first value comes after the second.
 | PRI_UD_SIZE(spec) \*)   | fprintf macro for format conversion of library-specific integer types.
 | SCN_UD_SIZE(spec) \*\*) | fscanf macro for format conversion of library-specific integer types.
 | UD_TYPE \*\*\*)         | To use wrapper macros, define UD_TYPE to either of appendixes of the specialized functions. Default is `I`.
+| UD_NO_WRAPPER_MACROS    | If this macro was defined before including "uni_deque.h" then the definition of wrapper macros will be omitted.
 | UD_INVALID_IDX          | Return value of UDFind() if the function failed.
 
 \*) Valid specifiers are i, d, u, x, and X to be passed to the macro.  
