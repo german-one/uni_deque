@@ -160,7 +160,7 @@ Return a value greater than zero if the first value comes after the second.
 
 \*) Valid specifiers are i, d, u, x, and X to be passed to the macro.  
 \*\*) Valid specifiers are i, d, u, and x to be passed to the macro.  
-\*\*\*) Valid value are `C` to `WStr` as described in the list of appendixes for specialized functions. Define this macro before including "uni_deque.h" in order to use these as a replacement for the functions of this library.  
+\*\*\*) Valid values are `C` to `WStr` as described in the list of appendixes for specialized functions. Define this macro before including "uni_deque.h" in order to use these as a replacement for the functions of this library.  
 
 
 ### Wrapper Macros
