@@ -1,8 +1,8 @@
 
 # uni_deque
 C Deque Library
-  
-  
+  <br/>
+  <br/>
 
 ## The interface
 Even if a Deque performs best only if you access the begin or the end of the list, this library also allows you to insert and access values at any position in the list, to enumerate a range of the list, to reverse the list, to sort the list, to insert sorted, to search for values, ...
@@ -25,7 +25,7 @@ Function names for data processing consist of key words that explain their purpo
 | Asc      | ascending order
 | Desc     | descending order
 | Find     | search the index of an element that contains a certain value
-  
+  <br/>
   
 Specialized functions have an appendix that indicates the type that the function was made for.  
 **List of appendixes:**
@@ -54,11 +54,11 @@ The name of the function to add an int at the beginning of a Deque of int is
 `PushFrontI`  
 The name of the function to insert a double into an ascending-sorted Deque of double is  
 `InsertAscD`  
-
+  <br/>
 
 The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for long int values and one for null-terminated strings.
-  
-  
+  <br/>
+  <br/>
 
 ## uni_deque Quick Reference
 
@@ -71,7 +71,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDFailed     | Test whether the previous operation failed.
 | UDDeleteData | Deallocate memory used for a value.
 | UDClose      | Recursively deallocate memory used in the deque.
-
+  <br/>
 
 ### Generalized Functions
 | Function       | Brief
@@ -91,7 +91,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDSort         | Sort elements.
 | UDInsertSorted | Insert into a sorted deque.
 | UDFind         | Search a specified value.
-
+  <br/>
 
 ### Specialized Functions
 | Function        | Brief
@@ -113,7 +113,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDFind...       | Search a specified value.
 
 The ellipsis is a placeholder for `C` to `WStr` as described in the list of appendixes for specialized functions.  
-
+  <br/>
 
 ### Types
 | Type                   | Brief
@@ -138,7 +138,7 @@ CmpCallback is a placeholder for the name of an application-defined function tha
 Return a value less than zero if the first value comes before the second.  
 Return a zero value if both values are equal.  
 Return a value greater than zero if the first value comes after the second.  
-
+  <br/>
 
 ### Macros
 | Macro                   | Brief
@@ -151,7 +151,7 @@ Return a value greater than zero if the first value comes after the second.
 \*) Valid specifiers are i, d, u, x, and X to be passed to the macro.  
 \*\*) Valid specifiers are i, d, u, and x to be passed to the macro.  
 \*\*\*) Valid values are `C` to `WStr` as described in the list of appendixes for specialized functions. Define this macro before including "uni_deque.h" in order to use these as a replacement for the functions of this library.  
-
+  <br/>
 
 ### Wrapper Macros
 | Macro       | Brief
@@ -181,8 +181,8 @@ Return a value greater than zero if the first value comes after the second.
 | FIND        | replacement for UDFind...
 
 The ellipsis is a placeholder for `C` to `WStr` as described in the list of appendixes for specialized functions. Macro `UD_TYPE` defines which appendix is used. Default is `I`.  
-  
-  
+  <br/>
+  <br/>
 
 ## A little background information about the implementation
 A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Aditionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.
