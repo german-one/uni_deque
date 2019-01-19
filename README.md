@@ -114,8 +114,6 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDPopBack...    | Delete last element
 | UDErase...      | Delete element at the specified index.
 | UDRemove...     | Delete element with the specified value.
-| UDReverse...    | Reverse the order of elements.
-| UDForEach...    | Apply function to a range of elements.
 | UDSortAsc...    | Sort elements in ascending order.
 | UDSortDesc...   | Sort elements in descending order.
 | UDInsertAsc...  | Insert into an ascending-sorted deque.
