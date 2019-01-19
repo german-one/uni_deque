@@ -34,8 +34,8 @@ Function names for data processing consist of key words that explain their purpo
 - Find
   - search the index of an element that contains a certain value
 
-Specialized functions have an appendix that indicates the type that the function was made for.
-*List of appendixes:*
+Specialized functions have an appendix that indicates the type that the function was made for.  
+**List of appendixes:**
 - C    (for char)
 - SC   (for signed char)
 - UC   (for unsigned char)
