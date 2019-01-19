@@ -1,7 +1,8 @@
 
 # uni_deque
 C Deque Library
-
+  
+  
 
 ## The interface
 Even if a Deque performs best only if you access the begin or the end of the list, this library also allows you to insert and access values at any position in the list, to enumerate a range of the list, to reverse the list, to sort the list, to insert sorted, to search for values, ...
@@ -9,31 +10,22 @@ Even if a Deque performs best only if you access the begin or the end of the lis
 In addition to the general functions which can be used for any kind of data, the library contains functions that are already specialized for basic types (characters, integers, floating points) and null-terminated strings (char* and wchar_t*).
 
 Function names for data processing consist of key words that explain their purpose:
-- Push
-  - add a new element at the beginning or end of the list
-- Insert
-  - insert a new element at a certain position in the list
-- Pop
-  - delete an element at the beginning or end of the list
-- Erase
-  - delete an element at a certain position in the list
-- Remove
-  - delete an element that contains a certain value
-- Front
-  - access the begin of the list
-- Back
-  - access the end of the list
-- At
-  - access an element at a certain position in the list
-- Sort
-  - sort the list
-- Asc
-  - ascending order
-- Desc
-  - descending order
-- Find
-  - search the index of an element that contains a certain value
-
+| Key Word | Meaning
+| -------- | ---
+| Push     | add a new element at the beginning or end of the list
+| Insert   | insert a new element at a certain position in the list
+| Pop      | delete an element at the beginning or end of the list
+| Erase    | delete an element at a certain position in the list
+| Remove   | delete an element that contains a certain value
+| Front    | access the begin of the list
+| Back     | access the end of the list
+| At       | access an element at a certain position in the list
+| Sort     | sort the list
+| Asc      | ascending order
+| Desc     | descending order
+| Find     | search the index of an element that contains a certain value
+  
+  
 Specialized functions have an appendix that indicates the type that the function was made for.  
 **List of appendixes:**
 
@@ -56,17 +48,16 @@ Specialized functions have an appendix that indicates the type that the function
 | Str      | null-terminated string of char
 | WStr     | null-terminated string of wchar_t
 
-Examples:
-
+Examples:  
 The name of the function to add an int at the beginning of a Deque of int is  
-`PushFrontI`
-
+`PushFrontI`  
 The name of the function to insert a double into an ascending-sorted Deque of double is  
-`InsertAscD`
+`InsertAscD`  
 
 
 The comments in the first 250 lines of "uni_deque.h" should give you all the information you need to work with the library. The "main.c" file contains two examples of how to use the library. One for long int values and one for null-terminated strings.
-
+  
+  
 
 ## uni_deque Quick Reference
 
@@ -189,7 +180,8 @@ Return a value greater than zero if the first value comes after the second.
 | FIND        | replacement for UDFind...
 
 The ellipsis is a placeholder for `C` to `WStr` as described in the list of appendixes for specialized functions. Macro `UD_TYPE` defines which appendix is used. Default is `I`.  
-
+  
+  
 
 ## A little background information about the implementation
 A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Aditionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.
