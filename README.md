@@ -36,24 +36,24 @@ Function names for data processing consist of key words that explain their purpo
 
 Specialized functions have an appendix that indicates the type that the function was made for.  
 **List of appendixes:**
-Appendix | Represented Type
---- | ---
-C    | char
-SC   | signed char
-UC   | unsigned char
-S    | short
-US   | unsigned short
-I    | int
-UI   | unsigned int
-L    | for long
-UL   | unsigned long
-LL   | long long
-ULL  | unsigned long long
-F    | float
-D    | double
-LD   | long double
-Str  | null-terminated string of char
-WStr | null-terminated string of wchar_t
+| Appendix | Represented Type
+| --- | ---
+| C    | char
+| SC   | signed char
+| UC   | unsigned char
+| S    | short
+| US   | unsigned short
+| I    | int
+| UI   | unsigned int
+| L    | for long
+| UL   | unsigned long
+| LL   | long long
+| ULL  | unsigned long long
+| F    | float
+| D    | double
+| LD   | long double
+| Str  | null-terminated string of char
+| WStr | null-terminated string of wchar_t
 
 Examples:
 
