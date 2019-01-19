@@ -4,7 +4,18 @@ C Deque Library
   <br/>
   <br/>
 
-## The interface
+## The implementation
+A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Aditionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.
+Schema:
+![deque](images/deque.png)
+
+
+The container for the values is a doubly-linked list. Besides of the pointer to the `previous` element and the `next` element it holds a pointer `data` to the actual value. This value can be of any type but should be the same for each element in a Deque because there will be no information about the memory size saved that `data` points to.
+Schema of the linked list:
+![list detail](images/list_detail.png)
+  <br/>
+  <br/>
+
 Even if a Deque performs best only if you access the begin or the end of the list, this library also allows you to insert and access values at any position in the list, to enumerate a range of the list, to reverse the list, to sort the list, to insert sorted, to search for values, ...
 
 In addition to the general functions which can be used for any kind of data, the library contains functions that are already specialized for basic types (characters, integers, floating points) and null-terminated strings (char* and wchar_t*).
@@ -62,7 +73,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 
 ## uni_deque Quick Reference
 
-### Frame Functions
+#### Frame Functions
 | Function     | Brief
 | ------------ | ---
 | UDOpen       | Open a new deque.
@@ -73,7 +84,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDClose      | Recursively deallocate memory used in the deque.
   <br/>
 
-### Generalized Functions
+#### Generalized Functions
 | Function       | Brief
 | -------------- | ---
 | UDPushFront    | Add element at the beginning.
@@ -83,7 +94,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDBack         | Access last element.
 | UDAt           | Access element at the specified index.
 | UDPopFront     | Delete first element.
-| UDPopBack      | Delete last element
+| UDPopBack      | Delete last element.
 | UDErase        | Delete element at the specified index.
 | UDRemove       | Delete element with the specified value.
 | UDReverse      | Reverse the order of elements.
@@ -93,7 +104,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDFind         | Search a specified value.
   <br/>
 
-### Specialized Functions
+#### Specialized Functions
 | Function        | Brief
 | --------------- | ---
 | UDPushFront...  | Add element at the beginning.
@@ -103,7 +114,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 | UDBack...       | Access last element.
 | UDAt...         | Access element at the specified index.
 | UDPopFront...   | Delete first element.
-| UDPopBack...    | Delete last element
+| UDPopBack...    | Delete last element.
 | UDErase...      | Delete element at the specified index.
 | UDRemove...     | Delete element with the specified value.
 | UDSortAsc...    | Sort elements in ascending order.
@@ -115,7 +126,7 @@ The comments in the first 250 lines of "uni_deque.h" should give you all the inf
 The ellipsis is a placeholder for `C` to `WStr` as described in the list of appendixes for specialized functions.  
   <br/>
 
-### Types
+#### Types
 | Type                   | Brief
 | ---------------------- | ---
 | ud_t                   | Type of a pointer to an object containig information to control the deque.
@@ -140,7 +151,7 @@ Return a zero value if both values are equal.
 Return a value greater than zero if the first value comes after the second.  
   <br/>
 
-### Macros
+#### Macros
 | Macro                   | Brief
 | ----------------------- | ---
 | PRI_UD_SIZE(spec) \*)   | fprintf macro for format conversion of library-specific integer types.
@@ -154,7 +165,7 @@ Return a value greater than zero if the first value comes after the second.
 \*\*\*) Valid values are `C` to `WStr` as described in the list of appendixes for specialized functions. Define this macro before including "uni_deque.h" in order to use these as a replacement for the functions of this library.  
   <br/>
 
-### Wrapper Macros
+#### Wrapper Macros
 | Macro       | Brief
 | ----------- | ---
 | OPEN        | replacement for UDOpen
@@ -182,16 +193,3 @@ Return a value greater than zero if the first value comes after the second.
 | FIND        | replacement for UDFind...
 
 The ellipsis is a placeholder for `C` to `WStr` as described in the list of appendixes for specialized functions. Macro `UD_TYPE` defines which appendix is used. Default is `I`.  
-  <br/>
-  <br/>
-
-## A little background information about the implementation
-A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Aditionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.
-Schema:
-![deque](images/deque.png)
-
-
-The container for the values is a doubly-linked list. Besides of the pointer to the `previous` element and the `next` element it holds a pointer `data` to the actual value. This value can be of any type but should be the same for each element in a Deque because there will be no information about the memory size saved that `data` points to.
-Schema of the linked list:
-![list detail](images/list_detail.png)
-
