@@ -5,12 +5,12 @@ C Deque Library
   <br/>
 
 ## The implementation
-A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Additionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.
+A Deque unites the functionality of a Stack and a Queue. That means a Deque holds the pointer to the first element `head` and a pointer to the last element `tail` of a container for the values to save. Additionally this implementation maintains the number of saved values `size` and an error indicator `err`. Only a pointer of type `ud_t` is needed as interface referencing the Deque.  
 Schema:
 ![deque](images/deque.png)
 
 
-The container for the values is a doubly-linked list. Besides of the pointer to the `previous` element and the `next` element it holds a pointer `data` to the actual value. This value can be of any type but should be the same for each element in a Deque because there will be no information about the memory size saved that `data` points to.
+The container for the values is a doubly-linked list. Besides of the pointer to the `previous` element and the `next` element it holds a pointer `data` to the actual value. This value can be of any type but should be the same for each element in a Deque because there will be no information about the memory size saved that `data` points to.  
 Schema of the linked list:
 ![list detail](images/list_detail.png)
   <br/>
