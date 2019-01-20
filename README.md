@@ -50,7 +50,7 @@ Specialized functions have an appendix that indicates the type that the function
 | US       | unsigned short
 | I        | int
 | UI       | unsigned int
-| L        | for long
+| L        | long
 | UL       | unsigned long
 | LL       | long long
 | ULL      | unsigned long long
